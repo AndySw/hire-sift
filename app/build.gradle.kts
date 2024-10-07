@@ -18,7 +18,8 @@ repositories {
 dependencies {
     // Use JUnit Jupiter for testing.
     testImplementation(libs.junit.jupiter)
-
+    testImplementation("org.mockito:mockito-inline:5.+")
+    testImplementation("org.mockito:mockito-junit-jupiter:5.+")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 
     // This dependency is used by the application.
