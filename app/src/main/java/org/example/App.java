@@ -13,16 +13,17 @@ public class App {
         return "Hello World!";
     }
 
-    public String sendRequest() throws Exception {
+    public String sendRequest(String uriString) throws Exception {
         
         HttpClient client = HttpClient.newHttpClient();
         
         HttpRequest request = HttpRequest.newBuilder()
-            .uri(new URI("https://google.com/"))
+            .uri(new URI(uriString))
             .GET()
             .build();
 
-        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        HttpResponse<String> response = 
+            client.send(request, HttpResponse.BodyHandlers.ofString());
         
         return response.body();
 
@@ -30,9 +31,10 @@ public class App {
 
     public static void main(String[] args) {
         App app = new App();
+        String uriString = "https://google.com/";
 
         try {
-            System.out.println(app.sendRequest());
+            System.out.println(app.sendRequest(uriString));
         } catch (Exception e) {
             System.out.println(e.toString());
         }
