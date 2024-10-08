@@ -1,7 +1,7 @@
 hire-sift
 =========
 
-An job market API scraper which might evolve into the basis of an analysis tool to understand demand for skills.
+A job market API scraper which might evolve into the basis of an analysis tool to understand demand for skills.
 ---------
 
 *Target APIs*
